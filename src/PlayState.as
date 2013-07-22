@@ -21,28 +21,18 @@ package
 			map = new FlxTilemap();
 			map.loadMap(new Sources.TxtMap, Sources.ImgMap, 16, 16);
 			add(map);
-			lava = new FlxGroup;
-			addLava(496, 192 + 32);
-			addLava(496 + 16, 192 + 32);
-			addLava(496 + 32, 192 + 32);
-			addLava(496 + 48, 192 + 32);
-			addLava(496 + 64, 192 + 32);
-			addLava(496 + 80, 192 + 32);
-			addLava(496 + 96, 192 + 32);
-			addLava(496 + 112, 192 + 32);
-			addLava(496 + 176, 192 + 32);
-			addLava(496 + 192, 192 + 32);
-			addLava(496 + 208, 192 + 32);
-			addLava(496 + 224, 192 + 32);
-			addLava(496 + 240, 192 + 32);
-			addLava(496 + 256, 192 + 32);
-			addLava(496 + 272, 192 + 32);
-			addLava(496 + 288, 192 + 32);
+			lava = new FlxGroup;			
 			player = new Player;			
-			player.x = FlxG.width - 211;
+			player.x = map.width - 1680;
 			player.y = FlxG.height - 32;
 			add(player);
-								
+			addLava(map.width - 1584, map.height - 16);	
+			addLava(map.width - 1584 + 16, map.height - 16);
+			addLava(map.width - 1584 + 32, map.height - 16);
+			addLava(map.width - 1584 + 48, map.height - 16);
+			addLava(map.width - 1584 + 64, map.height - 16);
+			addLava(map.width - 1584 + 80, map.height - 16);
+			addLava(map.width - 1584 + 96, map.height - 16);
 			FlxG.resetCameras();
 			FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
 			FlxG.camera.setBounds(0, 0, map.width, map.height);
@@ -60,7 +50,7 @@ package
 		}
 		
 		public function restart(a:Player, b:FlxGroup){
-			player.x = FlxG.width - 211;
+			player.x = map.width - 1680;
 			player.y = FlxG.height - 32;
 		}
 		
