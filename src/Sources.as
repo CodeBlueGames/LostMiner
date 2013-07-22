@@ -8,6 +8,8 @@ package
 		[Embed(source = 'org/flixel/data/private/graphics/background.png')] public static var ImgBG:Class;
 		[Embed(source = 'org/flixel/data/private/graphics/lava.png')] public static var ImgLava:Class;
 		[Embed(source = 'org/flixel/data/private/graphics/menu.png')] public static var ImgMenu:Class;
+		[Embed(source = 'org/flixel/data/private/graphics/door.png')] public static var ImgDoor:Class;
+		[Embed(source = 'org/flixel/data/private/graphics/key.png')] public static var ImgKey:Class;
 		
 		//IMPORTING SOUNDS AND MUSIC (.MP3)
 		[Embed(source = 'org/flixel/data/private/sounds/soundtrack.mp3')] public static var Mp3Soundtrack:Class;

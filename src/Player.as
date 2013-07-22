@@ -33,8 +33,8 @@ package
 				}
 				if (up) {
 					velocity.y = -150;
-					play('jump');
-					FlxG.play(Sources.Mp3Jump, 0.5);
+					play('jump');			
+					
 				}
 				if (left) {
 					velocity.x = -75;
