@@ -16,6 +16,9 @@ package
 		[Embed(source = 'org/flixel/data/private/sounds/jump.mp3')] public static var Mp3Jump:Class;
 		
 		//IMPORTING TEXTS (.TXT)
-		[Embed(source = 'org/flixel/data/private/texts/map1.txt', mimeType = "application/octet-stream")] public static var TxtMap:Class;		
+		[Embed(source = 'org/flixel/data/private/texts/map1.txt', mimeType = "application/octet-stream")] public static var TxtMap:Class;
+		[Embed(source = 'org/flixel/data/private/texts/map2.txt', mimeType = "application/octet-stream")] public static var TxtMap2:Class;
+		[Embed(source = 'org/flixel/data/private/texts/map3.txt', mimeType = "application/octet-stream")] public static var TxtMap3:Class;
+		[Embed(source = 'org/flixel/data/private/texts/map4.txt', mimeType = "application/octet-stream")] public static var TxtMap4:Class;
 	}
 }

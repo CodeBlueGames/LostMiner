@@ -23,7 +23,8 @@ package
 		{
 			var up:Boolean = (FlxG.keys.UP || FlxG.keys.W);
 			var right:Boolean = (FlxG.keys.RIGHT || FlxG.keys.D);
-			var left:Boolean = (FlxG.keys.LEFT || FlxG.keys.S);
+			var left:Boolean = (FlxG.keys.LEFT || FlxG.keys.A);
+			var down:Boolean = (FlxG.keys.DOWN || FlxG.keys.S);
 			if (touching == DOWN) {
 				if (!left && !right) {
 					play('idle');
@@ -38,18 +39,12 @@ package
 				}
 				if (left) {
 					velocity.x = -75;
-					facing = LEFT;
-					if (PlayState.player.x <= PlayState.map.width - PlayState.map.width) {
-						velocity.x = 0;
-					}
+					facing = LEFT;					
 				}
 				if (right) {
 					velocity.x = 75;
-					facing = RIGHT;
-					if (PlayState.player.x >= PlayState.map.width - 16) {
-						velocity.x = 0;
-					}
-				}
+					facing = RIGHT;					
+				}				
 			} else {
 				if (!left && !right) {
 					play('jump');
@@ -57,18 +52,12 @@ package
 				} else {
 				if (left) {
 					velocity.x = -75;
-					facing = LEFT;
-					if (PlayState.player.x <= PlayState.map.width - PlayState.map.width) {
-						velocity.x = 0;
-					}
+					facing = LEFT;					
 				}
 				if (right) {
 					velocity.x = 75;
-					facing = RIGHT;
-					if (PlayState.player.x >= PlayState.map.width - 16) {
-						velocity.x = 0;
-					}
-				}
+					facing = RIGHT;					
+				}				
 				}
 			}
 		}

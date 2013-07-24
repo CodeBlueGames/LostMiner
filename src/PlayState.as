@@ -1,17 +1,18 @@
 package
 {
 	import org.flixel.*;
+	import com.newgrounds.API;
 	
 	public class PlayState extends FlxState
 	{
 		
 		static var map:FlxTilemap; 
 		static var player:Player;
-		var bg:FlxSprite = new FlxSprite(0, 0, Sources.ImgBG);
 		var lava:FlxGroup;
 		var door:FlxSprite;
 		var key:FlxSprite;
 		var gotKey:Boolean = false;
+		static var gems:Number = 0.0;
 		
 		public function PlayState():void
 		{
@@ -20,12 +21,11 @@ package
 		
 		override public function create():void
 		{
-			add(bg);
 			map = new FlxTilemap();
 			map.loadMap(new Sources.TxtMap, Sources.ImgMap, 16, 16);
 			add(map);
 			lava = new FlxGroup;
-			door = new FlxSprite(map.width - 50, map.height - 138, Sources.ImgDoor);
+			door = new FlxSprite(map.width - 16, map.height - 96, Sources.ImgDoor);
 			add(door);
 			key = new FlxSprite(map.width - 150, map.height - 32, Sources.ImgKey);
 			add(key);
@@ -76,12 +76,12 @@ package
 		public function getKey(a:Player, b:FlxSprite):void {
 			remove(key);
 			key = null;
-			gotKey = true;
+			gotKey = true;			
 		}
 		
 		public function nextLevel(a:Player, b:FlxSprite):void {
 			if (gotKey == true) {
-				FlxG.switchState(new CreditState);
+				FlxG.switchState(new Level2);				
 			}
 		}
 	}

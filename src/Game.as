@@ -10,7 +10,7 @@ package
 		
 		public function Game()
 		{
-			super(resolution.x / zoom, resolution.y / zoom, PlayState, zoom);
+			super(resolution.x / zoom, resolution.y / zoom, Intro, zoom);
 			FlxG.flashFramerate = fps;
 		}
 	}

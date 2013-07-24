@@ -11,7 +11,7 @@ package
 	{
 		
 		var startButton:FlxButton = new FlxButton(FlxG.width / 2 - 40, FlxG.height / 2 - 50, "Start", startGame);
-		var creditsButton:FlxButton = new FlxButton(FlxG.width / 2 - 40, FlxG.height / 2 - 30, "Credits", showCredits);
+		var creditsButton:FlxButton = new FlxButton(FlxG.width / 2 - 40, FlxG.height / 2 - 30, "Credits", showCredits);		
 		var bg:FlxSprite;
 		
 		public function MenuState() 
@@ -19,7 +19,7 @@ package
 			bg = new FlxSprite(0, 0, Sources.ImgMenu);
 			add(bg);
 			add(startButton);
-			add(creditsButton);
+			add(creditsButton);			
 			FlxG.mouse.show();			
 		}
 		
@@ -31,7 +31,8 @@ package
 		public function showCredits():void
 		{
 			FlxG.switchState(new CreditState);
-		}
+		}	
+		
 		
 	}
 
